@@ -200,9 +200,11 @@ class PhoneIntel:
                         try:
 
                             self.__req_coordinates()
-
+                            
                             print(f"{SUB_KEY_STYLE}    - Latitude: {VALUE_STYLE}{self.__lat}")
                             print(f"{SUB_KEY_STYLE}    - Longitude: {VALUE_STYLE}{self.__lon}")
+                            google_maps_url = f"https://www.google.com/maps/@{self.__lat},{self.__lon},8z"
+                            print(f"{SUB_KEY_STYLE}    - Coordinates: {VALUE_STYLE}{google_maps_url}")
 
                         except:
                             pass
@@ -235,9 +237,11 @@ class PhoneIntel:
                                         self.__lon = data[0]['longitude']
                                         self.lat = self.__lat
                                         self.lon = self.__lon
+                                        self.coordinates = f"https://www.google.com/maps/@{self.lat},{self.lon},8z"
 
                                         print(f"{SUB_KEY_STYLE}    - Latitude: {VALUE_STYLE}{self.__lat}")
                                         print(f"{SUB_KEY_STYLE}    - Longitude: {VALUE_STYLE}{self.__lon}")
+                                        print(f"{SUB_KEY_STYLE}    - Coordinates: {VALUE_STYLE}{self.coordinates}")
                                     
                                     except:
 
@@ -245,12 +249,16 @@ class PhoneIntel:
 
                                         print(f"{SUB_KEY_STYLE}    - Latitude: {VALUE_STYLE}{self.__lat}")
                                         print(f"{SUB_KEY_STYLE}    - Longitude: {VALUE_STYLE}{self.__lon}")
+                                        google_maps_url = f"https://www.google.com/maps/@{self.__lat},{self.__lon},8z"
+                                        print(f"{SUB_KEY_STYLE}    - Coordinates: {VALUE_STYLE}{google_maps_url}")
 
                                 else:
                                     self.__req_coordinates()
 
                                     print(f"{SUB_KEY_STYLE}    - Latitude: {VALUE_STYLE}{self.__lat}")
                                     print(f"{SUB_KEY_STYLE}    - Longitude: {VALUE_STYLE}{self.__lon}")
+                                    google_maps_url = f"https://www.google.com/maps/@{self.__lat},{self.__lon},8z"
+                                    print(f"{SUB_KEY_STYLE}    - Coordinates: {VALUE_STYLE}{google_maps_url}")
 
 
                         else:
@@ -261,6 +269,8 @@ class PhoneIntel:
 
                                 print(f"{SUB_KEY_STYLE}    - Latitude: {VALUE_STYLE}{self.__lat}")
                                 print(f"{SUB_KEY_STYLE}    - Longitude: {VALUE_STYLE}{self.__lon}")
+                                google_maps_url = f"https://www.google.com/maps/@{self.__lat},{self.__lon},8z"
+                                print(f"{SUB_KEY_STYLE}    - Coordinates: {VALUE_STYLE}{google_maps_url}")
 
                             except:
                                 pass
