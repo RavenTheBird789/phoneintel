@@ -42,6 +42,7 @@ The latest features (such as the Google Maps link in `--info` output) may not be
 ```bash
 pip uninstall -y phoneintel
 pip install git+https://github.com/phoneintel/phoneintel.git
+pip install -e .
 ```
 
 Or clone the repository and install it locally:
@@ -51,12 +52,6 @@ git clone https://github.com/phoneintel/phoneintel.git
 cd phoneintel
 pip uninstall -y phoneintel
 pip install .
-```
-
-For development, use an editable install so your code changes take effect immediately, without reinstalling:
-
-```bash
-pip install -e .
 ```
 
 To check which copy is installed and where it lives:
