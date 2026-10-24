@@ -357,14 +357,18 @@ class PhoneIntel:
         return None
 
     def __req_coordinates(self):
+        """
+        Resolve coordinates (same sources and order as the original code):
+          1. phone-number-api.com  (values stored exactly as returned, nothing rounded)
+          2. country_coordinates.json (country centroid fallback)
+        """
         area = self.area or ''
         if 'Unknown' not in area:
 
             try:
                 self.__api = f"http://phone-number-api.com/json/?number={self.phone_number}"
                 self.__make_req()
-
-            except:
+            except Exception:
                 self.__load_coordinates_from_json()
         else:
             self.__load_coordinates_from_json()

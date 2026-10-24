@@ -105,9 +105,9 @@ Every lookup prints the coordinates and a Google Maps link in the country detail
 phoneintel --info +5492477338643
 ```
 ```
-    - Latitude: -34
-    - Longitude: -64
-    - Coordinates: https://www.google.com/maps/@-34,-64,8z
+    - Latitude: 36.060001373291016
+    - Longitude: -79.83000183105469
+    - Coordinates: https://www.google.com/maps/@36.060001373291016,-79.83000183105469,8z
 ```
 The location is approximate (area or country level, not the device's real position), so the link opens the map at a regional zoom level.
 
