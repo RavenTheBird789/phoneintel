@@ -40,7 +40,7 @@ With PhoneIntel, uncover essential details about phone numbers, including countr
 The latest features (such as the Google Maps link in `--info` output) may not be in the PyPI release yet. To get them, install directly from GitHub:
 
 ```bash
-pip uninstall phoneintel
+pip uninstall -y phoneintel
 pip install git+https://github.com/phoneintel/phoneintel.git
 ```
 
@@ -49,6 +49,7 @@ Or clone the repository and install it locally:
 ```bash
 git clone https://github.com/phoneintel/phoneintel.git
 cd phoneintel
+pip uninstall -y phoneintel
 pip install .
 ```
 
@@ -58,10 +59,10 @@ For development, use an editable install so your code changes take effect immedi
 pip install -e .
 ```
 
-You can check which copy is running with:
+To check which copy is installed and where it lives:
 
 ```bash
-python -c "import phoneintel; print(phoneintel.__file__)"
+pip show phoneintel
 ```
 
 ### For Kali Linux Users
