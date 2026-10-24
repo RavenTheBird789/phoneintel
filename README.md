@@ -35,6 +35,35 @@ With PhoneIntel, uncover essential details about phone numbers, including countr
     pip install phoneintel
     ```
 
+#### Install the latest version from source
+
+The latest features (such as the Google Maps link in `--info` output) may not be in the PyPI release yet. To get them, install directly from GitHub:
+
+```bash
+pip uninstall phoneintel
+pip install git+https://github.com/phoneintel/phoneintel.git
+```
+
+Or clone the repository and install it locally:
+
+```bash
+git clone https://github.com/phoneintel/phoneintel.git
+cd phoneintel
+pip install .
+```
+
+For development, use an editable install so your code changes take effect immediately, without reinstalling:
+
+```bash
+pip install -e .
+```
+
+You can check which copy is running with:
+
+```bash
+python -c "import phoneintel; print(phoneintel.__file__)"
+```
+
 ### For Kali Linux Users
 
 Remember to add the Directory to PATH:
@@ -80,6 +109,8 @@ phoneintel --info +5492477338643
     - Coordinates: https://www.google.com/maps/@-34,-64,8z
 ```
 The location is approximate (area or country level, not the device's real position), so the link opens the map at a regional zoom level.
+
+> **Note:** if `phoneintel --info` only shows Latitude and Longitude and no Coordinates line, you are running an older release. See [Install the latest version from source](#install-the-latest-version-from-source).
 
 #### Generate Google Dorks
 Create targeted Google dorks for various categories:
